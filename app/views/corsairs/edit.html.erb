@@ -27,6 +27,11 @@
     <%= f.text_field :github_handle %>
   </p>
 
+  <%= f.radio_button(:likeness, "kebab") %>
+  <%= f.label(:kebab, "I like kebab") %>
+  <%= f.radio_button(:likeness, "hummus") %>
+  <%= f.label(:hummus, "I like hummus") %>
+
   <p>
     <%= f.submit "submit your change" %>
     <%= link_to 'Clique pour détruire', @corsair, method: :delete %>

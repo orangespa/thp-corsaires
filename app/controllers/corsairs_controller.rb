@@ -7,8 +7,10 @@ class CorsairsController < ApplicationController
   def create
     @corsair = Corsair.new(corsair_params)
     if @corsair.save
+      flash[:success] = "Congras, you've created your account"
       redirect_to @corsair
-    else 
+    else
+      flash[:false] = "not success" 
       render 'new'
     end
   end
@@ -25,8 +27,10 @@ class CorsairsController < ApplicationController
     @corsair = Corsair.find(params[:id])
  
     if @corsair.update(corsair_params)
+      flash[:success] = "Your account've updated!"
       redirect_to @corsair
     else
+      flash[:false] = "not success"
       render 'edit'
     end
   end
@@ -35,12 +39,13 @@ class CorsairsController < ApplicationController
   @corsair = Corsair.find(params[:id])
 
     if @corsair.destroy
+      flash[:success] = "Your account've deleted!"
       redirect_to @corsair
     end
   end
 
   def index
-    @corsair = Corsair.all
+    @corsairs = Corsair.all
   end
 
   private 

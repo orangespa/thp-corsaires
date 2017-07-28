@@ -7,4 +7,6 @@
   <p><%=@corsair.first_name%> n'a pas encore renseigné son pseudo Slack !</p>
 <% end %>
 
-<%= link_to "edit corsair", edit_corsair_path %>
+<p> <%= @corsair.first_name%> like <%= @corsair.likeness %></p>
+
+<p><%= link_to "edit corsair", edit_corsair_path(@corsair) %> </p>
