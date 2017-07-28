@@ -1,0 +1,17 @@
+<h1>Index des Corsairs</h1>
+
+<table>
+  <tr>
+    <th>first_name</th>
+    <th>age</th>
+    <th colspan="3"></th>
+  </tr>
+
+   <% @corsair.each do |f| %>
+    <tr>
+      <td><%= f.first_name %></td>
+      <td><%= f.age %></td>
+      <td><%= link_to 'Show', corsairs_path %></td>   
+    </tr>
+  <% end %>
+</table> 

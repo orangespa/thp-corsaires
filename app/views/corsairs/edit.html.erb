@@ -1,0 +1,20 @@
+<h1>Corsairs#edit</h1>
+ 
+<%= form_for(@corsair) do |f| %>
+ 
+  <p>
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+  </p>
+ 
+  <p>
+    <%= f.label :age %>
+    <%= f.text_area :age %>
+  </p>
+ 
+  <p>
+    <%= f.submit "submit your change" %>
+    <%= link_to 'Clique pour détruire', @corsair, method: :delete %>
+  </p>
+<% end %>
+

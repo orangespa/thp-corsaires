@@ -1,0 +1,2 @@
+module CorsairsHelper
+end

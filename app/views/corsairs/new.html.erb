@@ -1,0 +1,12 @@
+<h1>Sign up please</h1>
+<p>
+  <%= form_for(@corsair) do |f| %>
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name, placeholder: "corsair1" %> 
+
+    <%= f.label :age %>
+    <%= f.text_field :age, placeholder: "33" %> 
+
+    <%= f.submit "Submit your account", class: "btn btn-primary"%>
+  <%end%>
+</p>
