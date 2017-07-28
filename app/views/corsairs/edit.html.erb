@@ -12,6 +12,21 @@
     <%= f.text_area :age %>
   </p>
  
+   <p>
+    <%= f.label :bio %>
+    <%= f.text_field :bio %>
+  </p>
+
+    <p>
+    <%= f.label :slack_handle %>
+    <%= f.text_field :slack_handle %>
+  </p>
+
+    <p>
+    <%= f.label :github_handle %>
+    <%= f.text_field :github_handle %>
+  </p>
+
   <p>
     <%= f.submit "submit your change" %>
     <%= link_to 'Clique pour détruire', @corsair, method: :delete %>
